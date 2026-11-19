@@ -1,0 +1,38 @@
+# project_name/
+├── .gitignore              # Git忽略設定
+├── README.md              # 專案說明與教學
+├── LICENSE                 # 授權協議
+├── requirements.txt       # Python依賴套件
+├── .env                   # 環境變數（如需要）
+├── src/
+│   ├── main.py            # 入口檔案
+│   ├── game_engine.py     # 遊戲核心邏輯
+					1.環境處理
+						接收:2維int list  (地圖狀態)
+						回傳:2維int list
+					2.下落 胖
+						接收:2維int list
+						回傳:2維int list
+					3.旋轉 
+						接收:2維int list
+						回傳:2維int list
+					4.消除 胖
+						接收:2維int list
+						回傳:2維int list
+│   ├── block_handler.py   # 方塊處理
+					1.方塊類型(i o...)假隨機
+						接收:佇列
+						回傳:int 佇列
+					2.特殊方塊 2:1:1
+						回傳:int
+					3.方塊顏色 (16色)
+						接收:int 
+						回傳:int
+│   └── ui.py              # UI層面
+					1.遊戲開始畫面
+					2.方塊呈現
+├── assets/                # 圖片、音效等資源
+├── docs/                  # 設計文件與說明
+├── tests/                 # 測試檔案
+├── config.yaml            # 配置文件
+└── VERSION.txt            # 版本號
