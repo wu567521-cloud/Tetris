@@ -1,0 +1,7 @@
+1. 匯入模組：from 方塊 import BlockType, create_empty_grid, create_tetromino, lock_piece_to_grid, apply_gravity_and_clear, draw_cell, draw_piece
+2. 初始化地圖：用 grid = create_empty_grid(20, 10) 建立地圖。
+3. 生出新方塊：用 current_piece = create_tetromino() 取得新方塊。
+4. 方塊落地時：依序呼叫 lock_piece_to_grid(current_piece, grid)，接著呼叫 lines = apply_gravity_and_clear(grid)（會自動處理消除、卯釘定住、流沙掉落，並回傳消掉幾行）。
+5. 畫出畫面時：
+	• 畫掉落中的方塊：呼叫 draw_piece(screen, current_piece, 格子大小, 起始X, 起始Y)。
+	• 畫地圖上的已固定方塊：只要 grid[y][x]["type"] != BlockType.EMPTY，就呼叫 draw_cell(screen, px, py, 格子大小, grid[y][x]["color"], grid[y][x]["type"])。
